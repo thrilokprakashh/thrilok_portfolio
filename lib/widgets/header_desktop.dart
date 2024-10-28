@@ -10,7 +10,7 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       height: 60,
       width: double.maxFinite,
       decoration: kHeaderDecoration,
@@ -19,7 +19,7 @@ class HeaderDesktop extends StatelessWidget {
           SiteLogo(
             ontap: () {},
           ),
-          Spacer(),
+          const Spacer(),
           for (int i = 0; i < navTitles.length; i++)
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -27,7 +27,7 @@ class HeaderDesktop extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   navTitles[i],
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: CustomColor.whitePrimary),

@@ -10,7 +10,7 @@ class HeaderMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(40, 5, 20, 5),
+      margin: const EdgeInsets.fromLTRB(40, 5, 20, 5),
       height: 50,
       decoration: kHeaderDecoration,
       child: Row(
@@ -18,12 +18,12 @@ class HeaderMobile extends StatelessWidget {
           SiteLogo(
             ontap: onLogoTap,
           ),
-          Spacer(),
+          const Spacer(),
           IconButton(
             onPressed: onMenuTap,
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           ),
         ],

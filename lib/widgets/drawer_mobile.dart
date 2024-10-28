@@ -19,14 +19,14 @@ class DrawerMobile extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Icon(Icons.close),
+                child: const Icon(Icons.close),
               ),
             ),
           ),
           for (int i = 0; i < navIcons.length; i++)
             ListTile(
-              contentPadding: EdgeInsets.symmetric(horizontal: 30),
-              titleTextStyle: TextStyle(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 30),
+              titleTextStyle: const TextStyle(
                   color: CustomColor.whitePrimary,
                   fontSize: 16,
                   fontWeight: FontWeight.w600),
