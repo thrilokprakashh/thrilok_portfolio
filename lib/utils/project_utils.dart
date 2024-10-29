@@ -16,8 +16,7 @@ class ProjectUtils {
 // HOBBY PROJECTS
 List<ProjectUtils> hobbyProjectUtils = [
   ProjectUtils(
-    image:
-        'assets/projects/Simulator Screenshot - iPhone 16 Pro - 2024-10-29 at 12.38.54.png',
+    image: 'assets/projects/D9BA6C60-8EE0-4E9C-9687-BD778C38E7AD.png',
     title: 'Facebook Clone',
     subtitle: 'Replicating Facebook’s UI with Flutter Magic',
     githubLink: 'https://github.com/thrilokprakashh/facebook_cloneApp',
@@ -43,11 +42,4 @@ List<ProjectUtils> hobbyProjectUtils = [
     subtitle: 'Challenge Your Mind, Test Your Knowledge',
     githubLink: 'https://github.com/thrilokprakashh/quiz_app',
   ),
-  ProjectUtils(
-    image: 'assets/projects/05.png',
-    title: 'Shopping cart App',
-    subtitle:
-        'Explore products by categories, with detailed descriptions and images.',
-    githubLink: 'https://github.com/thrilokprakashh/shoping_cartui',
-  ),
-];
+ ];

@@ -45,7 +45,7 @@ class SkilMobile extends StatelessWidget {
                 avatar: Image.asset(skillItems[i]["img"]),
               ),
           ],
-        )
+        ),
       ],
     );
   }
