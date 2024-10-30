@@ -4,8 +4,8 @@ import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/utils/project_utils.dart';
 import 'dart:js' as js;
 
-class projectCard extends StatelessWidget {
-  const projectCard({super.key, required this.project, required this.page});
+class ProjectCard extends StatelessWidget {
+  const ProjectCard({super.key, required this.project, required this.page});
   final ProjectUtils project;
   final Widget page;
 
@@ -26,12 +26,14 @@ class projectCard extends StatelessWidget {
           //img
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => page,
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => page,
+              //   ),
+              // );
+
+              //navigation for screenshots
             },
             child: Image.asset(
               project.image,
