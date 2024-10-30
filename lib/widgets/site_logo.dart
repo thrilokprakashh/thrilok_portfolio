@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thrilok_portfolio/constants/colors.dart';
 
 class SiteLogo extends StatelessWidget {
   const SiteLogo({super.key, this.ontap});
@@ -9,13 +8,9 @@ class SiteLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: ontap,
-      child: const Text(
-        "TP",
-        style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            decoration: TextDecoration.underline,
-            color: CustomColor.yellowSecondary),
+      child: const CircleAvatar(
+        radius: 23,
+        backgroundImage: AssetImage("assets/1720102216002.png"),
       ),
     );
   }

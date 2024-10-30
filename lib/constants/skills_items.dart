@@ -46,5 +46,10 @@ const List<Map> skillItems = [
   {
     "img": "assets/python.png",
     "title": "Python",
+  },
+  {
+    "img":
+        "assets/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f66697265626173652f66697265626173652d69636f6e2e737667.png",
+    "title": "Firebase",
   }
 ];

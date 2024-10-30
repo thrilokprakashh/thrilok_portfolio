@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
+import 'package:thrilok_portfolio/pages/facebook_clone.dart';
+import 'package:thrilok_portfolio/pages/food_recipe_app.dart';
+import 'package:thrilok_portfolio/pages/quiz_app.dart';
+import 'package:thrilok_portfolio/pages/whatsApp_clone.dart';
 import 'package:thrilok_portfolio/utils/project_utils.dart';
 import 'package:thrilok_portfolio/widgets/project_card.dart';
 
@@ -37,6 +41,11 @@ class ProjectSection extends StatelessWidget {
                 for (int i = 0; i < hobbyProjectUtils.length; i++)
                   projectCard(
                     project: hobbyProjectUtils[i],
+                    page: i == 0
+                        ? FacebookClone()
+                        : (i == 1
+                            ? WhatsappClone()
+                            : (i == 2 ? FoodRecipeApp() : QuizApp())),
                   ),
               ],
             ),

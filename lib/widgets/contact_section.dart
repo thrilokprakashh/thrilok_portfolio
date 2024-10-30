@@ -56,7 +56,7 @@ class ContactSection extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 700),
             child: CustomTextfiled(
               hintText: "Your Message",
-              maxLines: 20,
+              maxLines: 16,
             ),
           ),
           const SizedBox(height: 20),
@@ -64,6 +64,7 @@ class ContactSection extends StatelessWidget {
           ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 700),
             child: SizedBox(
+              height: 50,
               width: double.maxFinite,
               child: ElevatedButton(
                 onPressed: () {},

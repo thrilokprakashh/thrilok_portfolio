@@ -5,7 +5,8 @@ import 'package:thrilok_portfolio/style/style.dart';
 import 'package:thrilok_portfolio/widgets/site_logo.dart';
 
 class HeaderDesktop extends StatelessWidget {
-  const HeaderDesktop({super.key});
+  const HeaderDesktop({super.key, required this.onNavMenyTap});
+  final Function(int) onNavMenyTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,9 @@ class HeaderDesktop extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  onNavMenyTap(i);
+                },
                 child: Text(
                   navTitles[i],
                   style: const TextStyle(
