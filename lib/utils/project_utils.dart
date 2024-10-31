@@ -37,6 +37,6 @@ List<ProjectUtils> hobbyProjectUtils = [
     image: 'assets/projects/IMG_2776.png',
     title: 'Quiz App',
     subtitle: 'Challenge Your Mind, Test Your Knowledge',
-    githubLink: 'https://github.com/thrilokprakashh/quiz_app',
+    githubLink: 'https://github.com/thrilokprakashh/quiz_app_',
   ),
 ];
