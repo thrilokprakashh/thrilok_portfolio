@@ -73,7 +73,9 @@ class _MainDesktopState extends State<MainDesktop>
                   onPressed: () {
                     js.context.callMethod(
                       "open",
-                      ["https://github.com/thrilokprakashh/facebook_cloneApp"],
+                      [
+                        "https://drive.google.com/file/d/1rdqQisvhrW1z1SP7bpq-uA2hx-waapxw/view?usp=drivesdk"
+                      ],
                     );
                   },
                   child: Text(

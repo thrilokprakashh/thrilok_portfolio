@@ -5,10 +5,34 @@ import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/utils/project_utils.dart';
 import 'dart:js' as js;
 
-class ProjectCard extends StatelessWidget {
+class ProjectCard extends StatefulWidget {
   const ProjectCard({super.key, required this.project, required this.page});
   final ProjectUtils project;
   final Widget page;
+
+  @override
+  State<ProjectCard> createState() => _ProjectCardState();
+}
+
+class _ProjectCardState extends State<ProjectCard>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 200),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 1.0, end: 1.2).animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +61,7 @@ class ProjectCard extends StatelessWidget {
               //navigation for screenshots
             },
             child: Image.asset(
-              project.image,
+              widget.project.image,
               height: 190,
               width: 260,
               fit: BoxFit.cover,
@@ -47,7 +71,7 @@ class ProjectCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 15, 12, 12),
             child: Text(
-              project.title,
+              widget.project.title,
               style: GoogleFonts.jost(
                 fontWeight: FontWeight.w600,
                 color: CustomColor.whitePrimary,
@@ -58,7 +82,7 @@ class ProjectCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(
-              project.subtitle,
+              widget.project.subtitle,
               style: GoogleFonts.jost(
                 fontSize: 12,
                 color: CustomColor.whiteSecondary,
@@ -78,14 +102,22 @@ class ProjectCard extends StatelessWidget {
                       color: CustomColor.yellowSecondary, fontSize: 13),
                 ),
                 const Spacer(),
-                if (project.githubLink != null)
-                  InkWell(
-                    onTap: () {
-                      js.context.callMethod("open", [project.githubLink]);
-                    },
-                    child: Image.asset(
-                      "assets/github.png",
-                      width: 25,
+                if (widget.project.githubLink != null)
+                  MouseRegion(
+                    onEnter: (_) => _controller.forward(),
+                    onExit: (_) => _controller.reverse(),
+                    child: ScaleTransition(
+                      scale: _animation,
+                      child: InkWell(
+                        onTap: () {
+                          js.context
+                              .callMethod("open", [widget.project.githubLink]);
+                        },
+                        child: Image.asset(
+                          "assets/github.png",
+                          width: 25,
+                        ),
+                      ),
                     ),
                   ),
               ],

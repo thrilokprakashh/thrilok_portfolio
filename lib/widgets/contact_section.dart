@@ -12,11 +12,31 @@ class ContactSection extends StatefulWidget {
   State<ContactSection> createState() => _ContactSectionState();
 }
 
-class _ContactSectionState extends State<ContactSection> {
+class _ContactSectionState extends State<ContactSection>
+    with SingleTickerProviderStateMixin {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController messageController = TextEditingController();
   final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 200),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 1.0, end: 1.2).animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ScaffoldMessenger(
@@ -88,7 +108,7 @@ class _ContactSectionState extends State<ContactSection> {
                         emailController.text.isEmpty ||
                         messageController.text.isEmpty) {
                       scaffoldMessengerKey.currentState?.showSnackBar(
-                       const SnackBar(
+                        const SnackBar(
                           content: Text("Please fill out all fields!"),
                         ),
                       );
@@ -128,22 +148,36 @@ class _ContactSectionState extends State<ContactSection> {
               runSpacing: 12,
               alignment: WrapAlignment.center,
               children: [
-                InkWell(
-                  onTap: () {
-                    js.context.callMethod("open", [SnsLink.github]);
-                  },
-                  child: Image.asset(
-                    "assets/github.png",
-                    width: 28,
+                MouseRegion(
+                  onEnter: (_) => _controller.forward(),
+                  onExit: (_) => _controller.reverse(),
+                  child: ScaleTransition(
+                    scale: _animation,
+                    child: InkWell(
+                      onTap: () {
+                        js.context.callMethod("open", [SnsLink.github]);
+                      },
+                      child: Image.asset(
+                        "assets/github.png",
+                        width: 28,
+                      ),
+                    ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    js.context.callMethod("open", [SnsLink.linkedin]);
-                  },
-                  child: Image.asset(
-                    "assets/linkedin.png",
-                    width: 28,
+                MouseRegion(
+                  onEnter: (_) => _controller.forward(),
+                  onExit: (_) => _controller.reverse(),
+                  child: ScaleTransition(
+                    scale: _animation,
+                    child: InkWell(
+                      onTap: () {
+                        js.context.callMethod("open", [SnsLink.linkedin]);
+                      },
+                      child: Image.asset(
+                        "assets/linkedin.png",
+                        width: 28,
+                      ),
+                    ),
                   ),
                 ),
               ],
