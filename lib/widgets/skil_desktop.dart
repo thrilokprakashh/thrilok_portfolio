@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/constants/skills_items.dart';
 
@@ -34,7 +35,10 @@ class SkilDesktop extends StatelessWidget {
                       platformItems[i]["img"],
                       width: 26,
                     ),
-                    title: Text(platformItems[i]["title"]),
+                    title: Text(
+                      platformItems[i]["title"],
+                      style: GoogleFonts.jost(),
+                    ),
                   ),
                 )
             ],
@@ -58,7 +62,10 @@ class SkilDesktop extends StatelessWidget {
                     backgroundColor: CustomColor.bgLight2,
                     padding: const EdgeInsets.symmetric(
                         vertical: 12, horizontal: 16),
-                    label: Text(skillItems[i]["title"]),
+                    label: Text(
+                      skillItems[i]["title"],
+                      style: GoogleFonts.jost(),
+                    ),
                     avatar: Image.asset(skillItems[i]["img"]),
                   ),
               ],

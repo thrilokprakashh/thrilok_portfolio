@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/constants/nav_items.dart';
 
@@ -34,7 +35,10 @@ class DrawerMobile extends StatelessWidget {
                 onNavItemTap(i);
               },
               leading: Icon(navIcons[i]),
-              title: Text(navTitles[i]),
+              title: Text(
+                navTitles[i],
+                style: GoogleFonts.jost(),
+              ),
             ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'dart:js' as js;
 
@@ -14,6 +15,7 @@ class _MainDesktopState extends State<MainDesktop>
   late AnimationController _controller;
   late Animation<double> _opacityAnimation;
   late Animation<double> _scaleAnimation;
+
   @override
   void initState() {
     super.initState();
@@ -54,9 +56,9 @@ class _MainDesktopState extends State<MainDesktop>
             children: [
               FadeTransition(
                 opacity: _opacityAnimation,
-                child: const Text(
+                child: Text(
                   "Hi,\nI'm Thrilok Prakash\nA Flutter Developer",
-                  style: TextStyle(
+                  style: GoogleFonts.jost(
                       color: CustomColor.whitePrimary,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -74,9 +76,11 @@ class _MainDesktopState extends State<MainDesktop>
                       ["https://github.com/thrilokprakashh/facebook_cloneApp"],
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     "Download CV",
-                    style: TextStyle(color: CustomColor.whitePrimary),
+                    style: GoogleFonts.jost(
+                        color: CustomColor.whitePrimary,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),

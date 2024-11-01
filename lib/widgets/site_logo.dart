@@ -8,9 +8,16 @@ class SiteLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: ontap,
-      child: const CircleAvatar(
-        radius: 23,
-        backgroundImage: AssetImage("assets/1720102216002.png"),
+      child: Container(
+        width: 40, // Diameter of the CircleAvatar
+        height: 40, // Diameter of the CircleAvatar
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            image: AssetImage("assets/ppp.png"),
+            fit: BoxFit.cover, // This will apply BoxFit.cover
+          ),
+        ),
       ),
     );
   }

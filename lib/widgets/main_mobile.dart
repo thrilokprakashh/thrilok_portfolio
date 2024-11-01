@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'dart:js' as js;
 
@@ -76,7 +77,7 @@ class _MainMobileState extends State<MainMobile>
             opacity: _opacityAnimation,
             child: Text(
               "Hi,\nI'm Thrilok Prakash\nA Flutter Developer",
-              style: TextStyle(
+              style: GoogleFonts.jost(
                   color: CustomColor.whitePrimary,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -89,13 +90,18 @@ class _MainMobileState extends State<MainMobile>
             height: 50,
             child: ElevatedButton(
               onPressed: () {
-                js.context.callMethod("open", [
-                  "https://drive.google.com/file/d/1f0vMNVfu5odIJY73KjRQMmo-y4TVbpE-/view?usp=share_link"
-                ]);
+                js.context.callMethod(
+                  "open",
+                  [
+                    "https://drive.google.com/file/d/1f0vMNVfu5odIJY73KjRQMmo-y4TVbpE-/view?usp=share_link"
+                  ],
+                );
               },
-              child: const Text(
+              child: Text(
                 "Download CV",
-                style: TextStyle(color: CustomColor.whitePrimary),
+                style: GoogleFonts.jost(
+                    color: CustomColor.whitePrimary,
+                    fontWeight: FontWeight.bold),
               ),
             ),
           ),

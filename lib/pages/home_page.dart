@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/constants/size.dart';
@@ -88,9 +89,9 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       //title
-                      const Text(
+                      Text(
                         "What I can do",
-                        style: TextStyle(
+                        style: GoogleFonts.jost(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: CustomColor.whitePrimary),

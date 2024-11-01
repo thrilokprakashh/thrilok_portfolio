@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 
 class Footer extends StatelessWidget {
@@ -12,9 +13,9 @@ class Footer extends StatelessWidget {
       alignment: Alignment.center,
       child: Column(
         children: [
-          const Text(
+          Text(
             "Made by Thrilok Prakashan with Flutter",
-            style: TextStyle(
+            style: GoogleFonts.jost(
               fontWeight: FontWeight.w400,
               color: CustomColor.whiteSecondary,
             ),
@@ -22,9 +23,9 @@ class Footer extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          const Text(
+          Text(
             "thrilokp13@gmail.com",
-            style: TextStyle(
+            style: GoogleFonts.jost(
               fontWeight: FontWeight.bold,
               color: CustomColor.whitePrimary,
             ),

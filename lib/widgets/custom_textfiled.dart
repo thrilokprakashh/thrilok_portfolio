@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 
 class CustomTextfiled extends StatelessWidget {
@@ -13,7 +14,7 @@ class CustomTextfiled extends StatelessWidget {
     return TextField(
       controller: controller,
       maxLines: maxLines,
-      style: const TextStyle(
+      style: GoogleFonts.jost(
         color: CustomColor.scaffoldBg,
       ),
       decoration: InputDecoration(
@@ -24,7 +25,7 @@ class CustomTextfiled extends StatelessWidget {
         enabledBorder: getInputBorder,
         border: getInputBorder,
         hintText: hintText,
-        hintStyle: const TextStyle(color: CustomColor.hintDark),
+        hintStyle: GoogleFonts.jost(color: CustomColor.hintDark),
       ),
     );
   }

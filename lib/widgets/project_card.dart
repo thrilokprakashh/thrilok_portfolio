@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 
 import 'package:thrilok_portfolio/utils/project_utils.dart';
@@ -47,7 +48,7 @@ class ProjectCard extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(12, 15, 12, 12),
             child: Text(
               project.title,
-              style: const TextStyle(
+              style: GoogleFonts.jost(
                 fontWeight: FontWeight.w600,
                 color: CustomColor.whitePrimary,
               ),
@@ -58,7 +59,7 @@ class ProjectCard extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(
               project.subtitle,
-              style: const TextStyle(
+              style: GoogleFonts.jost(
                 fontSize: 12,
                 color: CustomColor.whiteSecondary,
               ),
@@ -71,10 +72,10 @@ class ProjectCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             child: Row(
               children: [
-                const Text(
+                Text(
                   "Available on:",
-                  style: TextStyle(
-                      color: CustomColor.yellowSecondary, fontSize: 10),
+                  style: GoogleFonts.jost(
+                      color: CustomColor.yellowSecondary, fontSize: 13),
                 ),
                 const Spacer(),
                 if (project.githubLink != null)

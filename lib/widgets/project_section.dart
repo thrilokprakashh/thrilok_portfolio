@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/pages/facebook_clone.dart';
 import 'package:thrilok_portfolio/pages/food_recipe_app.dart';
@@ -21,9 +22,9 @@ class ProjectSection extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
       child: Column(
         children: [
-          const Text(
+          Text(
             "Projects",
-            style: TextStyle(
+            style: GoogleFonts.jost(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: CustomColor.whitePrimary),
