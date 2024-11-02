@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/constants/size.dart';
-
 import 'package:thrilok_portfolio/widgets/contact_section.dart';
 
 import 'package:thrilok_portfolio/widgets/drawer_mobile.dart';
