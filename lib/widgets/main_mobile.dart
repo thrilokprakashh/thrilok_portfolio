@@ -93,7 +93,7 @@ class _MainMobileState extends State<MainMobile>
                 js.context.callMethod(
                   "open",
                   [
-                    "https://drive.google.com/file/d/1rdqQisvhrW1z1SP7bpq-uA2hx-waapxw/view?usp=drivesdk"
+                    "https://drive.google.com/file/d/1QSOCsg0nSnAmNSSUfPMWGOO0fq0rjlNF/view?usp=share_link"
                   ],
                 );
               },
