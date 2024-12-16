@@ -22,10 +22,10 @@ List<ProjectUtils> hobbyProjectUtils = [
     githubLink: 'https://github.com/thrilokprakashh/facebook_cloneApp',
   ),
   ProjectUtils(
-    image: 'assets/projects/D994333F-29A0-4B89-B198-5A99E7F6BF13.png',
-    title: 'WhatsApp clone',
-    subtitle: 'Exploring UI Dynamics: A WhatsApp Interface Clone',
-    githubLink: 'https://github.com/thrilokprakashh/whatsapp_clone',
+    image: 'assets/projects/logohere.png',
+    title: 'Trendy Times',
+    subtitle: 'Get real-time news and trends in a simple, easy-to-use app.',
+    githubLink: 'https://github.com/thrilokprakashh/flutter_news_app',
   ),
   ProjectUtils(
     image: 'assets/projects/1600w-2M8uaWgGUPg.png',

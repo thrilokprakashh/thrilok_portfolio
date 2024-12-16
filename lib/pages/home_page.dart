@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:thrilok_portfolio/constants/colors.dart';
 import 'package:thrilok_portfolio/constants/size.dart';
+import 'package:thrilok_portfolio/widgets/clone.dart';
 import 'package:thrilok_portfolio/widgets/contact_section.dart';
 
 import 'package:thrilok_portfolio/widgets/drawer_mobile.dart';
@@ -118,7 +119,12 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 30,
                 ),
+                //clone
 
+                const Clone(),
+                const SizedBox(
+                  height: 30,
+                ),
                 //CONTACT
                 ContactSection(
                   key: navBarKey[3],
